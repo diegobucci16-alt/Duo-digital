@@ -10,17 +10,20 @@ window.addEventListener('scroll', () => {
 
 // ===== MOBILE MENU =====
 function toggleMenu() {
-  const links  = document.getElementById('nav-links');
+  const menu   = document.getElementById('mobile-menu');
   const burger = document.getElementById('nav-burger');
-  const open   = links.classList.toggle('open');
-  burger.style.opacity = open ? '0.6' : '1';
+  const open   = menu.classList.toggle('open');
+  burger.classList.toggle('open', open);
   document.body.style.overflow = open ? 'hidden' : '';
 }
 function closeMenu() {
-  document.getElementById('nav-links').classList.remove('open');
-  document.getElementById('nav-burger').style.opacity = '1';
+  document.getElementById('mobile-menu').classList.remove('open');
+  document.getElementById('nav-burger').classList.remove('open');
   document.body.style.overflow = '';
 }
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeMenu();
+});
 
 // ===== IMAGE CAROUSEL =====
 let currentSlide = 0;

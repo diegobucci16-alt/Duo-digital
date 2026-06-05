@@ -3,25 +3,46 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Duo-Digital — Siti Web per Aziende · Rimini</title>
-<meta name="description" content="Creiamo siti web professionali, app e identità digitali per aziende. Rimini.">
+<title>Duo-Digital — Siti Web su Misura · Rimini</title>
+<meta name="description" content="Due sviluppatori di Rimini. Siti web, app e identità digitali costruiti su misura. Veloci, belli, efficaci.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- ========== NAV ========== -->
+<!-- ========== MOBILE MENU OVERLAY ========== -->
+<div class="mobile-menu" id="mobile-menu">
+  <div class="mm-header">
+    <a href="#hero" class="nav-logo mm-logo" onclick="closeMenu()">Duo-<span>Digital</span></a>
+    <button class="mm-close" onclick="closeMenu()" aria-label="Chiudi menu">
+      <span></span><span></span>
+    </button>
+  </div>
+  <nav class="mm-links">
+    <a href="#about"   onclick="closeMenu()"><span>01</span>Chi siamo</a>
+    <a href="#services" onclick="closeMenu()"><span>02</span>Servizi</a>
+    <a href="#works"   onclick="closeMenu()"><span>03</span>Lavori</a>
+    <a href="#contact" onclick="closeMenu()"><span>04</span>Contatti</a>
+  </nav>
+  <div class="mm-footer">
+    <a href="#contact" class="btn-primary mm-cta" onclick="closeMenu()">Parliamo →</a>
+    <p class="mm-tagline">Rimini · Due dev · Un sito che vale</p>
+  </div>
+</div>
+
 <nav id="navbar">
   <div class="nav-inner">
     <a href="#hero" class="nav-logo">Duo-<span>Digital</span></a>
     <ul class="nav-links" id="nav-links">
-      <li><a href="#about" onclick="closeMenu()">Chi siamo</a></li>
-      <li><a href="#services" onclick="closeMenu()">Servizi</a></li>
-      <li><a href="#works" onclick="closeMenu()">Lavori</a></li>
-      <li><a href="#contact" onclick="closeMenu()">Contatti</a></li>
+      <li><a href="#about">Chi siamo</a></li>
+      <li><a href="#services">Servizi</a></li>
+      <li><a href="#works">Lavori</a></li>
+      <li><a href="#contact">Contatti</a></li>
     </ul>
-    <a href="#contact" class="nav-cta">Parlaci →</a>
+    <a href="#contact" class="nav-cta">Parliamo →</a>
     <button class="nav-burger" id="nav-burger" onclick="toggleMenu()" aria-label="Menu">
       <span></span><span></span><span></span>
     </button>
@@ -35,20 +56,20 @@
 
   <div class="hero-content">
     <div class="hero-eyebrow reveal">
-      <span class="dot"></span> Rimini, Italia · Disponibili per nuovi progetti
+      <span class="dot"></span> Rimini · Due dev · Un sito che vale
     </div>
     <h1 class="hero-title reveal">
-      Costruiamo<br>
-      <em>esperienze</em><br>
-      digitali.
+      Design.<br>
+      Codice.<br>
+      <em>Risultati.</em>
     </h1>
     <p class="hero-sub reveal">
-      Siti web, app e identità digitali che fanno crescere le aziende.<br>
-      Dal concept al lancio, ci pensiamo noi.
+      Trasformiamo la tua idea in un sito web che lavora per te 24/7.<br>
+      Veloce, su misura, senza compromessi.
     </p>
     <div class="hero-actions reveal">
-      <a href="#works" class="btn-primary">Vedi i nostri lavori</a>
-      <a href="#contact" class="btn-ghost">Scrivici →</a>
+      <a href="#works" class="btn-primary">Guarda i lavori</a>
+      <a href="#contact" class="btn-ghost">Parliamo →</a>
     </div>
   </div>
 
@@ -87,19 +108,19 @@
   <div class="numbers-inner">
     <div class="number-card reveal">
       <div class="number-val" data-target="4">0</div>
-      <div class="number-lbl">Progetti completati</div>
+      <div class="number-lbl">Progetti consegnati</div>
     </div>
     <div class="number-card reveal">
       <div class="number-val" data-target="4">0</div>
-      <div class="number-lbl">Clienti soddisfatti</div>
+      <div class="number-lbl">Clienti felici</div>
     </div>
     <div class="number-card reveal">
       <div class="number-val" data-target="1">0</div>
-      <div class="number-lbl">Anno di esperienza</div>
+      <div class="number-lbl">Anno sul campo</div>
     </div>
     <div class="number-card reveal">
       <div class="number-val" data-target="100">0</div>
-      <div class="number-lbl">% consegnati in tempo</div>
+      <div class="number-lbl">% nei tempi</div>
     </div>
   </div>
 </section>
@@ -109,16 +130,16 @@
   <div class="section-inner">
     <div class="about-grid">
       <div class="about-left">
-        <div class="section-tag reveal">✦ Chi siamo</div>
+        <div class="section-tag reveal">/ Chi siamo</div>
         <h2 class="section-title reveal">
-          Due ragazzi di Rimini.<br>
-          Una passione per il web.
+          Non un'agenzia.<br>
+          Una squadra di due.
         </h2>
         <p class="about-text reveal">
-          Siamo Diego e Alessandro, due sviluppatori riminesi che hanno trasformato la loro passione per il digitale in un progetto serio. Realizziamo siti web e app su misura per piccole e medie imprese che vogliono fare sul serio online.
+          Diego e Alessandro — due sviluppatori riminesi. Niente gerarchie, niente account manager, niente intermediari. Parli direttamente con chi scrive il tuo codice.
         </p>
         <p class="about-text reveal">
-          Niente template preconfezionati. Ogni progetto è unico, pensato attorno alle esigenze del cliente, sviluppato con cura artigianale e consegnato puntuale.
+          Ogni progetto è trattato come se fosse il nostro: con cura, puntualità e zero scuse. Consegniamo ciò che promettiamo, quando lo promettiamo.
         </p>
         <div class="about-tags reveal">
           <span>HTML · CSS · JS</span>
@@ -153,8 +174,8 @@
 <!-- ========== SERVIZI ========== -->
 <section id="services">
   <div class="section-inner">
-    <div class="section-tag reveal">✦ Cosa realizziamo</div>
-    <h2 class="section-title reveal">Tutto il digitale<br>di cui hai bisogno.</h2>
+    <div class="section-tag reveal">/ Cosa facciamo</div>
+    <h2 class="section-title reveal">Quello che<br>sappiamo fare.</h2>
 
     <div class="services-grid">
       <div class="service-card reveal">
@@ -162,52 +183,52 @@
           <svg viewBox="0 0 40 40" fill="none"><rect x="4" y="8" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2"/><path d="M4 14h32" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="11" r="1.5" fill="currentColor"/><circle cx="14" cy="11" r="1.5" fill="currentColor"/></svg>
         </div>
         <h3>Siti Web Aziendali</h3>
-        <p>Landing page, siti vetrina e portali corporate. Design su misura, ottimizzati per Google e veloci su tutti i dispositivi.</p>
+        <p>Siti vetrina, landing page e portali aziendali. Veloci da caricare, belli da vedere, costruiti per convertire visitatori in clienti.</p>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">
           <svg viewBox="0 0 40 40" fill="none"><rect x="12" y="4" width="16" height="32" rx="3" stroke="currentColor" stroke-width="2"/><path d="M16 30h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
         <h3>App Web & PWA</h3>
-        <p>Applicazioni web progressive che funzionano come app native. Gestione ordini, prenotazioni, fidelity card digitali.</p>
+        <p>App web installabili che funzionano come native. Fidelity card, prenotazioni, gestione clienti — tutto in un'interfaccia fluida.</p>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">
           <svg viewBox="0 0 40 40" fill="none"><circle cx="20" cy="20" r="14" stroke="currentColor" stroke-width="2"/><path d="M20 6C20 6 14 12 14 20s6 14 6 14M20 6c0 0 6 6 6 14s-6 14-6 14M6 20h28" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
         <h3>E-commerce</h3>
-        <p>Negozi online completi con carrello, pagamenti e gestione ordini. Soluzioni scalabili per vendere online sin dal primo giorno.</p>
+        <p>Shop online chiavi in mano. Catalogo prodotti, pagamenti sicuri, gestione ordini. Pronto a vendere dal primo giorno.</p>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">
           <svg viewBox="0 0 40 40" fill="none"><path d="M8 32L16 24M16 24L20 28M16 24L24 16M24 16L28 20M24 16L32 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
         </div>
         <h3>SEO & Performance</h3>
-        <p>Ottimizzazione per i motori di ricerca, velocità di caricamento e analisi del traffico. Più visibilità, più clienti.</p>
+        <p>Ti portiamo in cima a Google. Ottimizzazione tecnica, contenuti e monitoraggio continuo. Più visibilità, più clienti reali.</p>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">
           <svg viewBox="0 0 40 40" fill="none"><rect x="6" y="6" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/><rect x="22" y="6" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/><rect x="6" y="22" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/><rect x="22" y="22" width="12" height="12" rx="2" stroke="currentColor" stroke-width="2"/></svg>
         </div>
         <h3>UI/UX Design</h3>
-        <p>Interfacce intuitive e visivamente curate. Wireframe, prototipi e design system pronti per lo sviluppo.</p>
+        <p>Interfacce che gli utenti capiscono e amano. Dal wireframe al mockup definitivo, ogni pixel studiato con precisione.</p>
       </div>
       <div class="service-card reveal">
         <div class="service-icon">
           <svg viewBox="0 0 40 40" fill="none"><path d="M20 8v8M20 24v8M8 20h8M24 20h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="20" cy="20" r="4" stroke="currentColor" stroke-width="2"/></svg>
         </div>
         <h3>Manutenzione & Hosting</h3>
-        <p>Aggiornamenti, backup, sicurezza e supporto continuo. Il tuo sito è sempre in buone mani.</p>
+        <p>Il sito gira, è aggiornato e protetto. Ci pensiamo noi, tu pensi al tuo business. Assistenza diretta, senza ticket.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ========== PRODOTTI / LAVORI ========== -->
+<!-- ========== LAVORI ========== -->
 <section id="works">
   <div class="section-inner">
-    <div class="section-tag reveal">✦ I nostri prodotti</div>
-    <h2 class="section-title reveal">Già online.<br>Già funzionanti.</h2>
+    <div class="section-tag reveal">/ Portfolio</div>
+    <h2 class="section-title reveal">Lavori reali.<br>Risultati reali.</h2>
 
     <div class="works-grid">
 
@@ -227,7 +248,7 @@
         </div>
         <div class="work-info">
           <h3>Club 1 Piano – Porta Galliana</h3>
-          <p>Sito vetrina + Prenotazioni, prossimi eventi, offerte per il locale di Via Porta Galliana, Rimini.</p>
+          <p>Sito vetrina con prenotazioni online, prossimi eventi e offerte esclusive per il locale di Via Porta Galliana, Rimini.</p>
           <div class="work-stack"><span>HTML</span><span>CSS</span><span>JS</span><span>Supabase</span></div>
           <a href="https://www.portagalliana-clubprimopiano.com" target="_blank" class="work-link">Visita il sito →</a>
         </div>
@@ -249,9 +270,9 @@
         </div>
         <div class="work-info">
           <h3>🔥FUEGO🔥</h3>
-          <p>Sito web responsive con sistema integrato di generazione biglietti digitali per gli eventi al Mojito. Prenota il tuo posto direttamente dal telefono.</p>
+          <p>Sito responsive con generazione biglietti digitali per gli eventi al Mojito. Prenota il tuo posto direttamente dal telefono.</p>
           <div class="work-stack"><span>HTML</span><span>CSS</span><span>JS</span><span>Supabase</span></div>
-          <a href="https://alecode25.github.io/fuego_events/" target="_blank" class="work-link">Visita il sito→</a>
+          <a href="https://alecode25.github.io/fuego_events/" target="_blank" class="work-link">Visita il sito →</a>
         </div>
       </div>
 
@@ -273,9 +294,9 @@
         </div>
         <div class="work-info">
           <h3>Offerte Digitali – Porta Galliana</h3>
-          <p>Piattaforma web per promozioni e pacchetti esclusivi del Club Primo Piano. Offerte visibili su smartphone, aggiornabili in tempo reale — semplice, veloce, immediato.</p>
+          <p>Piattaforma per promozioni e pacchetti esclusivi del Club. Offerte aggiornabili in tempo reale, ottimizzata per smartphone.</p>
           <div class="work-stack"><span>HTML</span><span>CSS</span><span>JS</span><span>Supabase</span></div>
-          <a href="https://www.portagalliana-clubprimopiano.com/offerte.html" target="_blank" class="work-link">Visita il sito→</a>
+          <a href="https://www.portagalliana-clubprimopiano.com/offerte.html" target="_blank" class="work-link">Visita il sito →</a>
         </div>
       </div>
 
@@ -286,35 +307,35 @@
 <!-- ========== PROCESSO ========== -->
 <section id="process">
   <div class="section-inner">
-    <div class="section-tag reveal">✦ Come lavoriamo</div>
-    <h2 class="section-title reveal">Semplice,<br>trasparente, veloce.</h2>
+    <div class="section-tag reveal">/ Come lavoriamo</div>
+    <h2 class="section-title reveal">Il nostro<br>metodo.</h2>
     <div class="process-steps">
       <div class="process-step reveal">
         <div class="step-num">01</div>
         <div class="step-body">
-          <h4>Chiamata conoscitiva</h4>
-          <p>Capiamo le tue esigenze, i tuoi obiettivi e il tuo budget. Gratuita, senza impegno.</p>
+          <h4>Ti ascoltiamo</h4>
+          <p>Una call di 30 minuti per capire chi sei, cosa ti serve e dove vuoi arrivare. Zero vendita, massima onestà.</p>
         </div>
       </div>
       <div class="process-step reveal">
         <div class="step-num">02</div>
         <div class="step-body">
-          <h4>Proposta</h4>
-          <p>Ti presentiamo una proposta dettagliata con tempi e soluzioni. Nessuna sorpresa.</p>
+          <h4>Ti proponiamo</h4>
+          <p>Una proposta chiara con tempi, stack tecnologico e tutto il necessario. Nessun costo nascosto, nessuna sorpresa.</p>
         </div>
       </div>
       <div class="process-step reveal">
         <div class="step-num">03</div>
         <div class="step-body">
-          <h4>Design & sviluppo</h4>
-          <p>Lavoriamo con aggiornamenti frequenti. Sei sempre aggiornato su ogni passo.</p>
+          <h4>Costruiamo</h4>
+          <p>Ti aggiorniamo ad ogni milestone. Vedi il progetto crescere in tempo reale e puoi dare feedback in ogni momento.</p>
         </div>
       </div>
       <div class="process-step reveal">
         <div class="step-num">04</div>
         <div class="step-body">
-          <h4>Lancio</h4>
-          <p>Pubblichiamo il sito e lo mettiamo online. Il tuo progetto prende vita.</p>
+          <h4>Lanciamo</h4>
+          <p>Deploy, test finali e via. Il tuo sito va live e tu sei pronto a ricevere clienti dal primo giorno online.</p>
         </div>
       </div>
     </div>
@@ -326,9 +347,9 @@
   <div class="section-inner">
     <div class="contact-grid">
       <div class="contact-left">
-        <div class="section-tag reveal">✦ Contatti</div>
-        <h2 class="section-title reveal">Hai un progetto<br>in mente?</h2>
-        <p class="contact-sub reveal">Raccontaci la tua idea. Rispondiamo entro 24 ore.</p>
+        <div class="section-tag reveal">/ Contatti</div>
+        <h2 class="section-title reveal">Hai un progetto?<br>Parliamo.</h2>
+        <p class="contact-sub reveal">Dimmi cosa hai in mente. Ti rispondo entro poche ore, senza formalità.</p>
         <div class="contact-channels reveal">
           <a href="mailto:tua@email.it" class="channel-card" id="email-card">
             <div class="channel-icon">
@@ -363,9 +384,9 @@
             </div>
           </div>
           <div class="form-group">
-            <label>Cosa ti serve?</label>
+            <label>Di cosa hai bisogno?</label>
             <select id="f-type">
-              <option value="">Seleziona un servizio…</option>
+              <option value="">Scegli un servizio…</option>
               <option>Sito web aziendale</option>
               <option>App web / PWA</option>
               <option>E-commerce</option>
@@ -374,14 +395,14 @@
             </select>
           </div>
           <div class="form-group">
-            <label>Messaggio</label>
-            <textarea id="f-msg" rows="4" placeholder="Raccontaci il tuo progetto…" required></textarea>
+            <label>Raccontaci</label>
+            <textarea id="f-msg" rows="4" placeholder="Descrivi il tuo progetto in poche righe…" required></textarea>
           </div>
           <button type="submit" class="form-submit" id="form-submit-btn">
-            Invia messaggio →
+            Mandaci un messaggio →
           </button>
           <div id="form-success" class="form-success hidden">
-            ✓ Messaggio inviato! Ti rispondiamo entro 24h.
+            ✓ Ricevuto! Ti rispondiamo entro poche ore.
           </div>
         </form>
       </div>
@@ -393,7 +414,7 @@
 <footer>
   <div class="footer-inner">
     <div class="footer-logo">Duo-<span>Digital</span></div>
-    <div class="footer-tagline">Siti web e app per aziende · Rimini, Italia</div>
+    <div class="footer-tagline">Siti web e app · Rimini, Italia</div>
     <div class="footer-links">
       <a href="#about">Chi siamo</a>
       <a href="#services">Servizi</a>
@@ -401,7 +422,7 @@
       <a href="#contact">Contatti</a>
     </div>
     <div class="footer-bottom">
-      © 2025 Duo-Digital · Tutti i diritti riservati
+      © 2026 Duo-Digital · Fatto con cura, a Rimini.
     </div>
   </div>
 </footer>
