@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Battigia — racchette da beach tennis fatte a Rimini</title>
+<meta name="description" content="Tre modelli di racchette da beach tennis costruiti a mano a Rimini. Carbonio 24K, EVA differenziata. Provale in spiaggia prima di comprarle.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Archivo:wght@400;500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blu:#072654;
+  --blu-2:#0B3B8C;
+  --blu-3:#0A3170;
+  --gesso:#F2EFE3;
+  --corallo:#FF5A3C;
+  --palla:#DDFF4F;
+  --tenue:#8FA9D6;
+  --display:'Syne',sans-serif;
+  --corpo:'Archivo',system-ui,sans-serif;
+  --dati:'Space Mono',monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--blu);
+  color:var(--gesso);
+  font-family:var(--corpo);
+  font-size:17px;
+  line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:3px solid var(--palla);outline-offset:3px;border-radius:2px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.eyebrow{
+  font-family:var(--dati);font-size:12px;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--palla);
+}
+.nav{
+  position:sticky;top:0;z-index:50;
+  background:rgba(7,38,84,.88);backdrop-filter:blur(10px);
+  border-bottom:1px solid rgba(242,239,227,.14);
+}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:68px;gap:20px}
+.marchio{font-family:var(--display);font-weight:800;font-size:21px;letter-spacing:.02em}
+.marchio span{color:var(--corallo)}
+.nav-link{display:none;font-size:15px;color:var(--tenue);transition:color .2s}
+.nav-link:hover{color:var(--gesso)}
+@media(min-width:860px){.nav-menu{display:flex;gap:32px}.nav-link{display:block}}
+.btn{
+  display:inline-block;font-family:var(--corpo);font-weight:500;font-size:15px;
+  padding:13px 24px;border:0;cursor:pointer;border-radius:4px;
+  transition:transform .12s ease,box-shadow .12s ease,background .2s;
+}
+.btn-primo{background:var(--corallo);color:#2A0A02;box-shadow:0 4px 0 #B33220}
+.btn-primo:hover{transform:translateY(2px);box-shadow:0 2px 0 #B33220}
+.btn-primo:active{transform:translateY(4px);box-shadow:none}
+.btn-fantasma{background:transparent;color:var(--gesso);box-shadow:inset 0 0 0 2px rgba(242,239,227,.4)}
+.btn-fantasma:hover{box-shadow:inset 0 0 0 2px var(--gesso);background:rgba(242,239,227,.07)}
+.btn-piccolo{padding:10px 18px;font-size:14px}
+.hero{padding:64px 0 40px}
+.hero .wrap{display:grid;gap:44px;align-items:center}
+@media(min-width:900px){.hero{padding:88px 0 64px}.hero .wrap{grid-template-columns:1fr 1fr;gap:64px}}
+.hero h1{
+  font-family:var(--display);font-weight:800;
+  font-size:clamp(38px,6.4vw,68px);line-height:.98;letter-spacing:-.02em;
+  margin:18px 0 20px;
+}
+.hero h1 em{font-style:normal;color:var(--corallo)}
+.hero p{font-size:clamp(17px,2vw,19px);color:#CBD9F0;max-width:44ch}
+.azioni{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.telaio{width:100%;max-width:420px;margin:0 auto;display:block;overflow:visible}
+.foro{fill:#1E4E9E;transition:fill .3s ease}
+.telaio-corpo{fill:var(--blu-2)}
+.telaio-bordo{fill:none;stroke:var(--gesso);stroke-width:3}
+.sweet{fill:none;stroke:var(--palla);stroke-width:2;stroke-dasharray:5 7}
+.sweet-txt{font-family:var(--dati);font-size:11px;fill:var(--palla);letter-spacing:.1em}
+.suggerimento{
+  font-family:var(--dati);font-size:11px;color:var(--tenue);
+  text-align:center;margin-top:14px;letter-spacing:.08em;text-transform:uppercase;
+}
+.fascia{
+  background:var(--corallo);color:#2A0A02;
+  padding:14px 0;overflow:hidden;white-space:nowrap;
+  border-top:2px solid var(--blu);border-bottom:2px solid var(--blu);
+}
+.fascia-pista{display:inline-block;animation:scorri 30s linear infinite}
+.fascia:hover .fascia-pista{animation-play-state:paused}
+.fascia b{font-family:var(--dati);font-weight:700;font-size:13px;letter-spacing:.12em;padding:0 26px}
+@keyframes scorri{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.sezione{padding:80px 0}
+.sezione-chiara{background:var(--blu-3)}
+.testata{max-width:56ch;margin-bottom:40px}
+.testata h2{
+  font-family:var(--display);font-weight:800;
+  font-size:clamp(28px,4.4vw,44px);line-height:1.04;letter-spacing:-.015em;margin:14px 0 14px;
+}
+.testata p{color:#BDCDE8}
+.filtri{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+.filtro{
+  font-family:var(--dati);font-size:12px;letter-spacing:.1em;text-transform:uppercase;
+  background:transparent;color:var(--tenue);border:1px solid rgba(242,239,227,.28);
+  padding:10px 18px;border-radius:40px;cursor:pointer;transition:all .2s;
+}
+.filtro:hover{color:var(--gesso);border-color:var(--gesso)}
+.filtro[aria-pressed="true"]{background:var(--palla);color:#26300A;border-color:var(--palla)}
+.griglia{display:grid;gap:22px;grid-template-columns:repeat(auto-fit,minmax(268px,1fr))}
+.scheda{
+  background:var(--blu-2);border-radius:10px;padding:26px 24px 24px;
+  border:1px solid rgba(242,239,227,.12);
+  transition:transform .3s ease,border-color .3s ease,opacity .3s ease;
+}
+.scheda:hover{transform:translateY(-6px);border-color:var(--palla)}
+.scheda.spenta{opacity:.28}
+.scheda-svg{width:100%;height:132px;display:block;margin-bottom:20px}
+.scheda h3{font-family:var(--display);font-weight:800;font-size:27px;letter-spacing:.01em}
+.tag{
+  display:inline-block;font-family:var(--dati);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;padding:4px 11px;border-radius:20px;margin-bottom:12px;
+  background:rgba(221,255,79,.16);color:var(--palla);
+}
+.scheda p{font-size:15px;color:#C3D3EE;margin:10px 0 18px}
+.dati{width:100%;border-collapse:collapse;font-family:var(--dati);font-size:12.5px}
+.dati th{
+  text-align:left;font-weight:400;color:var(--tenue);
+  padding:7px 0;border-top:1px solid rgba(242,239,227,.13);letter-spacing:.04em;
+}
+.dati td{text-align:right;padding:7px 0;border-top:1px solid rgba(242,239,227,.13);font-weight:700}
+.squadra{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}
+.persona{border-top:2px solid var(--corallo);padding-top:18px}
+.persona .iniz{font-family:var(--display);font-weight:800;font-size:40px;color:var(--corallo);line-height:1}
+.persona h3{font-family:var(--corpo);font-weight:500;font-size:18px;margin:10px 0 4px}
+.persona p{font-size:14.5px;color:#BDCDE8}
+.contatti{display:grid;gap:44px}
+@media(min-width:900px){.contatti{grid-template-columns:1fr 1fr;gap:64px}}
+.titolo-contatti{font-family:var(--display);font-weight:800;font-size:clamp(28px,4.4vw,44px);line-height:1.04;margin:14px 0 22px}
+.campo{display:block;margin-bottom:18px}
+.campo span{
+  display:block;font-family:var(--dati);font-size:11px;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--tenue);margin-bottom:7px;
+}
+.campo input,.campo select,.campo textarea{
+  width:100%;background:rgba(242,239,227,.07);color:var(--gesso);
+  border:1px solid rgba(242,239,227,.26);border-radius:5px;
+  padding:12px 14px;font-family:var(--corpo);font-size:16px;
+}
+.campo textarea{resize:vertical;min-height:96px}
+.campo input::placeholder,.campo textarea::placeholder{color:#6E88B8}
+.campo select option{background:var(--blu-2)}
+.nota{font-family:var(--dati);font-size:12px;color:var(--tenue);margin-top:14px;line-height:1.7}
+.dove{background:var(--blu-2);border-radius:10px;padding:28px 26px;border:1px solid rgba(242,239,227,.12)}
+.dove h3{font-family:var(--display);font-weight:800;font-size:23px;margin-bottom:14px}
+.dove dt{font-family:var(--dati);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--tenue);margin-top:16px}
+.dove dd{font-size:16px;margin-top:3px}
+.pie{border-top:1px solid rgba(242,239,227,.14);padding:34px 0;font-size:14px;color:var(--tenue)}
+.pie .wrap{display:flex;flex-wrap:wrap;gap:14px;justify-content:space-between;align-items:center}
+.rivela{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.rivela.dentro{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  .rivela{opacity:1;transform:none;transition:none}
+  .fascia-pista{animation:none}
+  .scheda:hover{transform:none}
+  .btn-primo:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap">
+    <a href="#" class="marchio">BATTIGIA<span>.</span></a>
+    <div class="nav-menu">
+      <a href="#modelli" class="nav-link">Modelli</a>
+      <a href="#scelta" class="nav-link">Come scegliere</a>
+      <a href="#noi" class="nav-link">Chi le fa</a>
+    </div>
+    <a href="#contatti" class="btn btn-primo btn-piccolo">Provale in spiaggia</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Rimini — dove il beach tennis è nato</p>
+      <h1>Le costruiamo qui.<br>E le proviamo <em>qui</em>.</h1>
+      <p>Tre modelli, carbonio 24K, EVA differenziata. Nessun distributore in mezzo: le porti in campo la domenica mattina e decidi dopo averle sentite in mano.</p>
+      <div class="azioni">
+        <a href="#modelli" class="btn btn-primo">Vedi i tre modelli</a>
+        <a href="#contatti" class="btn btn-fantasma">Prenota una prova</a>
+      </div>
+    </div>
+    <div>
+      <svg class="telaio" viewBox="0 0 400 520" role="img" aria-labelledby="tit-rac">
+        <title id="tit-rac">Racchetta da beach tennis con la faccia forata: i fori si accendono al passaggio del puntatore</title>
+        <rect x="185" y="330" width="30" height="150" rx="15" class="telaio-corpo"/>
+        <rect x="181" y="360" width="38" height="95" rx="18" fill="#062254"/>
+        <path d="M150 300 L185 400 M250 300 L215 400" stroke="#0B3B8C" stroke-width="18" stroke-linecap="round"/>
+        <ellipse cx="200" cy="190" rx="132" ry="163" class="telaio-corpo"/>
+        <ellipse cx="200" cy="190" rx="132" ry="163" class="telaio-bordo"/>
+        <g id="fori"></g>
+        <circle cx="200" cy="190" r="52" class="sweet"/>
+        <text x="200" y="194" text-anchor="middle" class="sweet-txt">SWEET SPOT</text>
+      </svg>
+      <p class="suggerimento">Passa il dito sulla faccia</p>
+    </div>
+  </div>
+</header>
+
+<div class="fascia" aria-hidden="true">
+  <div class="fascia-pista">
+    <b>CARBONIO 24K</b><b>&middot;</b><b>EVA 38 / 45 / 50</b><b>&middot;</b><b>VERNICE A MANO</b><b>&middot;</b><b>50 PEZZI L'ANNO</b><b>&middot;</b><b>GARANZIA 12 MESI</b><b>&middot;</b><b>CONSEGNA IN ROMAGNA IN 24H</b><b>&middot;</b><b>CARBONIO 24K</b><b>&middot;</b><b>EVA 38 / 45 / 50</b><b>&middot;</b><b>VERNICE A MANO</b><b>&middot;</b><b>50 PEZZI L'ANNO</b><b>&middot;</b><b>GARANZIA 12 MESI</b><b>&middot;</b><b>CONSEGNA IN ROMAGNA IN 24H</b><b>&middot;</b>
+  </div>
+</div>
+<section class="sezione" id="modelli">
+  <div class="wrap">
+    <div class="testata rivela">
+      <p class="eyebrow">I tre modelli</p>
+      <h2>Prendono il nome dai venti che tirano qui.</h2>
+      <p>Stesso telaio, tre anime diverse. Cambiano peso, bilanciamento e durezza dell'EVA: è lì che si decide come la senti in mano.</p>
+    </div>
+
+    <div class="filtri" role="group" aria-label="Filtra i modelli per carattere">
+      <button class="filtro" data-filtro="tutti" aria-pressed="true">Tutti</button>
+      <button class="filtro" data-filtro="controllo" aria-pressed="false">Controllo</button>
+      <button class="filtro" data-filtro="equilibrio" aria-pressed="false">Equilibrio</button>
+      <button class="filtro" data-filtro="potenza" aria-pressed="false">Potenza</button>
+    </div>
+
+    <div class="griglia">
+      <article class="scheda rivela" data-tipo="controllo">
+        <svg class="scheda-svg" viewBox="0 0 200 132" aria-hidden="true">
+          <ellipse cx="100" cy="58" rx="46" ry="52" fill="#062254" stroke="#F2EFE3" stroke-width="2"/>
+          <g fill="#1E4E9E"><circle cx="82" cy="40" r="3.4"/><circle cx="100" cy="40" r="3.4"/><circle cx="118" cy="40" r="3.4"/><circle cx="82" cy="58" r="3.4"/><circle cx="100" cy="58" r="3.4"/><circle cx="118" cy="58" r="3.4"/><circle cx="82" cy="76" r="3.4"/><circle cx="100" cy="76" r="3.4"/><circle cx="118" cy="76" r="3.4"/></g>
+          <rect x="94" y="106" width="12" height="24" rx="6" fill="#0B3B8C"/>
+        </svg>
+        <span class="tag">Controllo</span>
+        <h3>Levante</h3>
+        <p>Leggera, bilanciata bassa. Per chi sta a rete, gioca di tocco e vuole sentire dove va la palla.</p>
+        <table class="dati">
+          <tr><th scope="row">Peso</th><td>335 g</td></tr>
+          <tr><th scope="row">Bilanciamento</th><td>Basso</td></tr>
+          <tr><th scope="row">EVA</th><td>50 soft</td></tr>
+          <tr><th scope="row">Superficie</th><td>Carbonio 12K</td></tr>
+        </table>
+      </article>
+
+      <article class="scheda rivela" data-tipo="equilibrio">
+        <svg class="scheda-svg" viewBox="0 0 200 132" aria-hidden="true">
+          <ellipse cx="100" cy="58" rx="46" ry="52" fill="#062254" stroke="#F2EFE3" stroke-width="2"/>
+          <g fill="#1E4E9E"><circle cx="82" cy="40" r="3.4"/><circle cx="100" cy="40" r="3.4"/><circle cx="118" cy="40" r="3.4"/><circle cx="82" cy="58" r="3.4"/><circle cx="118" cy="58" r="3.4"/><circle cx="82" cy="76" r="3.4"/><circle cx="100" cy="76" r="3.4"/><circle cx="118" cy="76" r="3.4"/></g>
+          <circle cx="100" cy="58" r="6" fill="#DDFF4F"/>
+          <rect x="94" y="106" width="12" height="24" rx="6" fill="#0B3B8C"/>
+        </svg>
+        <span class="tag">Equilibrio</span>
+        <h3>Maestrale</h3>
+        <p>Il compromesso onesto. Se è la tua prima racchetta seria, o non sai da che parte stai, parti da questa.</p>
+        <table class="dati">
+          <tr><th scope="row">Peso</th><td>342 g</td></tr>
+          <tr><th scope="row">Bilanciamento</th><td>Neutro</td></tr>
+          <tr><th scope="row">EVA</th><td>45 medium</td></tr>
+          <tr><th scope="row">Superficie</th><td>Carbonio 18K</td></tr>
+        </table>
+      </article>
+
+      <article class="scheda rivela" data-tipo="potenza">
+        <svg class="scheda-svg" viewBox="0 0 200 132" aria-hidden="true">
+          <ellipse cx="100" cy="58" rx="46" ry="52" fill="#062254" stroke="#F2EFE3" stroke-width="2"/>
+          <g fill="#1E4E9E"><circle cx="82" cy="40" r="3.4"/><circle cx="100" cy="40" r="3.4"/><circle cx="118" cy="40" r="3.4"/><circle cx="82" cy="58" r="3.4"/><circle cx="100" cy="58" r="3.4"/><circle cx="118" cy="58" r="3.4"/><circle cx="82" cy="76" r="3.4"/><circle cx="100" cy="76" r="3.4"/><circle cx="118" cy="76" r="3.4"/></g>
+          <path d="M100 24 L100 92" stroke="#FF5A3C" stroke-width="2.5" stroke-dasharray="4 5"/>
+          <rect x="94" y="106" width="12" height="24" rx="6" fill="#0B3B8C"/>
+        </svg>
+        <span class="tag">Potenza</span>
+        <h3>Bora</h3>
+        <p>Pesante sopra, EVA dura. Smash che pesano davvero. Perdona poco in difesa, restituisce tanto in attacco.</p>
+        <table class="dati">
+          <tr><th scope="row">Peso</th><td>352 g</td></tr>
+          <tr><th scope="row">Bilanciamento</th><td>Alto</td></tr>
+          <tr><th scope="row">EVA</th><td>38 hard</td></tr>
+          <tr><th scope="row">Superficie</th><td>Carbonio 24K</td></tr>
+        </table>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="sezione sezione-chiara" id="scelta">
+  <div class="wrap">
+    <div class="testata rivela">
+      <p class="eyebrow">Come scegliere</p>
+      <h2>Non farlo dalla scheda tecnica.</h2>
+      <p>I grammi sulla carta non dicono niente finché non senti il rimbalzo. Portiamo tutti e tre i modelli al campo, li provi mezz'ora e poi ne parliamo. Se nessuno ti convince, va bene lo stesso: te lo diciamo noi se conviene aspettare.</p>
+      <div class="azioni">
+        <a href="#contatti" class="btn btn-primo">Prenota una prova</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sezione" id="noi">
+  <div class="wrap">
+    <div class="testata rivela">
+      <p class="eyebrow">Chi le fa</p>
+      <h2>Siamo in tre, e giochiamo tutti e tre.</h2>
+      <p>Nessun ufficio marketing. Chi risponde su WhatsApp è la stessa persona che ha incollato il telaio.</p>
+    </div>
+    <div class="squadra rivela">
+      <div class="persona">
+        <div class="iniz">01</div>
+        <h3>Nome Cognome</h3>
+        <p>Telai e incollaggio. Gioca a destra, dritto piatto, zero pazienza per le racchette che vibrano.</p>
+      </div>
+      <div class="persona">
+        <div class="iniz">02</div>
+        <h3>Nome Cognome</h3>
+        <p>Verniciatura e finiture. Ogni faccia è dipinta a mano, per questo non ne escono due identiche.</p>
+      </div>
+      <div class="persona">
+        <div class="iniz">03</div>
+        <h3>Nome Cognome</h3>
+        <p>Prove in campo e ordini. È quello che ti risponde alle undici di sera.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sezione sezione-chiara" id="contatti">
+  <div class="wrap contatti">
+    <div class="rivela">
+      <p class="eyebrow">Contatti</p>
+      <h2 class="titolo-contatti">Scrivici su WhatsApp.</h2>
+      <form id="modulo">
+        <label class="campo">
+          <span>Come ti chiami</span>
+          <input type="text" id="nome" placeholder="Marco" required>
+        </label>
+        <label class="campo">
+          <span>Quale modello ti interessa</span>
+          <select id="modello">
+            <option>Non lo so ancora, aiutatemi</option>
+            <option>Levante &mdash; controllo</option>
+            <option>Maestrale &mdash; equilibrio</option>
+            <option>Bora &mdash; potenza</option>
+          </select>
+        </label>
+        <label class="campo">
+          <span>Dicci qualcosa di come giochi</span>
+          <textarea id="messaggio" placeholder="Gioco da due anni, terza categoria, sto sempre a rete"></textarea>
+        </label>
+        <button type="submit" class="btn btn-primo">Apri WhatsApp con il messaggio pronto</button>
+        <p class="nota">Il modulo non invia niente da solo: apre WhatsApp con il testo già scritto, così controlli tu cosa parte.</p>
+      </form>
+    </div>
+    <div class="rivela">
+      <div class="dove">
+        <h3>Dove trovarci</h3>
+        <dl>
+          <dt>Prove in campo</dt>
+          <dd>Domenica 9:00 &mdash; 12:00, Bagno 61, Rimini</dd>
+          <dt>WhatsApp</dt>
+          <dd>+39 000 000 0000</dd>
+          <dt>Instagram</dt>
+          <dd>@battigia.rackets</dd>
+          <dt>Laboratorio</dt>
+          <dd>Su appuntamento, zona Viserba</dd>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="pie">
+  <div class="wrap">
+    <span>Battigia &mdash; racchette da beach tennis, Rimini</span>
+    <span>P.IVA 00000000000</span>
+  </div>
+</footer>
+<script>
+(function(){
+  var motoRidotto = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  var ns = 'http://www.w3.org/2000/svg';
+  var gruppo = document.getElementById('fori');
+  var svg = document.querySelector('.telaio');
+  var fori = [];
+  for (var y = -140; y <= 140; y += 21) {
+    for (var x = -110; x <= 110; x += 21) {
+      if ((x*x)/(112*112) + (y*y)/(143*143) < 1) {
+        var c = document.createElementNS(ns, 'circle');
+        var cx = 200 + x, cy = 190 + y;
+        c.setAttribute('cx', cx);
+        c.setAttribute('cy', cy);
+        c.setAttribute('r', 4.2);
+        c.setAttribute('class', 'foro');
+        gruppo.appendChild(c);
+        fori.push({el:c, x:cx, y:cy});
+      }
+    }
+  }
+
+  if (!motoRidotto && svg) {
+    var px = -999, py = -999, inAttesa = false;
+    var disegna = function(){
+      inAttesa = false;
+      for (var i = 0; i < fori.length; i++) {
+        var f = fori[i];
+        var d = Math.sqrt((f.x-px)*(f.x-px) + (f.y-py)*(f.y-py));
+        var k = Math.max(0, 1 - d / 105);
+        f.el.setAttribute('r', (4.2 + k * 5.4).toFixed(2));
+        f.el.style.fill = k > 0.08 ? 'rgba(221,255,79,' + (0.18 + k * 0.82).toFixed(2) + ')' : '';
+      }
+    };
+    var muovi = function(e){
+      var r = svg.getBoundingClientRect();
+      var p = e.touches ? e.touches[0] : e;
+      px = (p.clientX - r.left) / r.width * 400;
+      py = (p.clientY - r.top) / r.height * 520;
+      if (!inAttesa) { inAttesa = true; requestAnimationFrame(disegna); }
+    };
+    svg.addEventListener('pointermove', muovi);
+    svg.addEventListener('touchmove', muovi, {passive:true});
+    svg.addEventListener('pointerleave', function(){ px = py = -999; requestAnimationFrame(disegna); });
+  }
+
+  var bottoni = document.querySelectorAll('.filtro');
+  var schede = document.querySelectorAll('.scheda');
+  Array.prototype.forEach.call(bottoni, function(b){
+    b.addEventListener('click', function(){
+      Array.prototype.forEach.call(bottoni, function(x){
+        x.setAttribute('aria-pressed', String(x === b));
+      });
+      var f = b.getAttribute('data-filtro');
+      Array.prototype.forEach.call(schede, function(s){
+        s.classList.toggle('spenta', f !== 'tutti' && s.getAttribute('data-tipo') !== f);
+      });
+    });
+  });
+
+  var daRivelare = document.querySelectorAll('.rivela');
+  if (motoRidotto || !('IntersectionObserver' in window)) {
+    Array.prototype.forEach.call(daRivelare, function(e){ e.classList.add('dentro'); });
+  } else {
+    var osservatore = new IntersectionObserver(function(voci){
+      voci.forEach(function(v, i){
+        if (v.isIntersecting) {
+          setTimeout(function(){ v.target.classList.add('dentro'); }, i * 90);
+          osservatore.unobserve(v.target);
+        }
+      });
+    }, {threshold: 0.12, rootMargin: '0px 0px -40px'});
+    Array.prototype.forEach.call(daRivelare, function(e){ osservatore.observe(e); });
+  }
+
+  var NUMERO = '390000000000';
+  document.getElementById('modulo').addEventListener('submit', function(e){
+    e.preventDefault();
+    var testo = 'Ciao! Sono ' + document.getElementById('nome').value.trim() +
+      '. Modello: ' + document.getElementById('modello').value + '. ' +
+      document.getElementById('messaggio').value.trim();
+    window.open('https://wa.me/' + NUMERO + '?text=' + encodeURIComponent(testo), '_blank', 'noopener');
+  });
+})();
+</script>
+</body>
+</html>
