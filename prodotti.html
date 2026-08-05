@@ -4,7 +4,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--ink:#08080a;--flame:#FF6A1A;--flame-hot:#FF8C3D;--ember:#FF3D00;--wa:#25D366;
+:root{--ink:#08080a;--flame:#FF6A1A;--flame-hot:#FF8C3D;--ember:#FF3D00;--wa:var(--flame-hot);
 --text:#F3F1EE;--muted:rgba(243,241,238,.56);--faint:rgba(243,241,238,.30);
 --glass:rgba(255,255,255,.055);--glass-2:rgba(255,255,255,.09);
 --stroke:rgba(255,255,255,.12);--stroke-2:rgba(255,255,255,.22);
@@ -33,7 +33,7 @@ nav.scrolled{background:rgba(8,8,10,.85);box-shadow:0 12px 40px -14px rgba(0,0,0
 .navlinks a:hover,.navlinks a.on{color:var(--text);background:var(--glass-2)}
 .btn{font-family:var(--body);font-weight:600;font-size:.92rem;border:none;cursor:pointer;border-radius:14px;padding:12px 22px;transition:transform .25s,box-shadow .25s;display:inline-flex;align-items:center;gap:8px}
 .btn-primary{background:linear-gradient(135deg,var(--flame-hot),var(--ember));color:#fff;box-shadow:var(--glow)}
-.btn-wa{background:linear-gradient(135deg,#2ee878,#128C4B);color:#fff;box-shadow:0 0 34px -8px rgba(37,211,102,.8)}
+.btn-wa{background:linear-gradient(135deg,var(--flame-hot),var(--ember));color:#fff;box-shadow:var(--glow)}
 .btn-wa:hover{transform:translateY(-2px)}
 .menu-btn{display:none;position:relative;background:var(--glass-2);border:1px solid var(--stroke);border-radius:12px;width:44px;height:44px;cursor:pointer}
 .menu-btn span{position:absolute;left:12px;right:12px;top:50%;height:2px;background:#fff;border-radius:2px;transition:transform .35s cubic-bezier(.4,.1,.2,1),opacity .2s}
@@ -87,8 +87,8 @@ section{position:relative;z-index:1}
 .pfoot{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:13px;border-top:1px solid var(--stroke)}
 .pprice{font-family:var(--disp);font-weight:700;font-size:1.16rem}
 .pprice.muted{font-size:.88rem;color:var(--muted)}
-.pbtn{font-family:var(--body);font-size:.78rem;font-weight:600;padding:8px 13px;border-radius:10px;border:1px solid rgba(37,211,102,.45);background:rgba(37,211,102,.13);color:#3ee98a;cursor:pointer;transition:.2s;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
-.pbtn:hover{background:rgba(37,211,102,.26);border-color:var(--wa)}
+.pbtn{font-family:var(--body);font-size:.78rem;font-weight:600;padding:8px 13px;border-radius:10px;border:1px solid rgba(255,106,26,.45);background:rgba(255,106,26,.13);color:#FFB37A;cursor:pointer;transition:.2s;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.pbtn:hover{background:rgba(255,106,26,.26);border-color:var(--wa)}
 .wa{font-size:.9rem}
 .empty{display:none;text-align:center;padding:70px 20px;color:var(--muted)}.empty.on{display:block}
 .empty .big{font-size:2.4rem;margin-bottom:12px}
@@ -512,7 +512,7 @@ footer{position:relative;z-index:1;border-top:1px solid var(--stroke);padding:40
    NUMERO WHATSAPP — inserisci qui il numero di NetLab Academy
    formato internazionale senza + e senza spazi, es: 393401234567
    ============================================================ */
-const WHATSAPP = "";
+const WHATSAPP = "393516715828";
 
 const nav=document.getElementById('nav');
 addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>30),{passive:true});
